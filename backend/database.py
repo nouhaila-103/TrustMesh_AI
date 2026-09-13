@@ -6,7 +6,8 @@ import json
 from sqlalchemy import Column, DateTime, Float, Integer, String, Text, create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-DATABASE_URL = "sqlite:///./trustmesh.db"
+import os
+DATABASE_URL = "sqlite:////tmp/trustmesh.db" if os.getenv("VERCEL") else "sqlite:///./trustmesh.db"
 
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
