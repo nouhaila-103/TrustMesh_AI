@@ -13,7 +13,8 @@ st.markdown("### Simulate a transaction")
 
 SCENARIOS = {
     "Legitimate login": dict(phone_number="+99999991001", lat=25.227, lon=60.252),
-    "Account takeover attempt (SIM swap + location mismatch)": dict(phone_number="+99999991000", lat=48.8566, lon=2.3522),
+    "Suspicious SIM activity (medium risk)": dict(phone_number="+99999990001", lat=25.227, lon=60.252),
+    "Account takeover attempt (high risk)": dict(phone_number="+99999991000", lat=48.8566, lon=2.3522),
 }
 
 scenario_name = st.selectbox("Demo scenario", list(SCENARIOS.keys()))
