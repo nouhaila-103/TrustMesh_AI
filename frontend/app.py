@@ -12,9 +12,9 @@ st.caption("The AI Trust Layer for Secure Digital Services — GSMA MENA Ignite"
 st.markdown("### Simulate a transaction")
 
 SCENARIOS = {
-    "Legitimate login": dict(phone_number="+99999991000", lat=25.227, lon=60.252),
+    "Legitimate login": dict(phone_number="+99999991001", lat=25.227, lon=60.252),
     "Recent SIM swap (high risk)": dict(phone_number="+99999990001", lat=25.227, lon=60.252),
-    "Impossible travel (location mismatch)": dict(phone_number="+99999991000", lat=48.8566, lon=2.3522),
+    "Impossible travel (location mismatch)": dict(phone_number="+99999991001", lat=48.8566, lon=2.3522),
 }
 
 scenario_name = st.selectbox("Demo scenario", list(SCENARIOS.keys()))
